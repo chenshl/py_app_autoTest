@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>APP自动化测试报告2018-04-23 00-36-12</title>
+    <title>APP自动化测试报告2018-04-25 00-02-44</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -190,10 +190,10 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>APP自动化测试报告2018-04-23 00-36-12</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-04-23 00:36:12</p>
-<p class='attribute'><strong>执行时长:</strong> 0:00:00</p>
-<p class='attribute'><strong>执行状态:</strong> none</p>
+<h1>APP自动化测试报告2018-04-25 00-02-44</h1>
+<p class='attribute'><strong>开始时间:</strong> 2018-04-25 00:02:44</p>
+<p class='attribute'><strong>执行时长:</strong> 0:01:13.844109</p>
+<p class='attribute'><strong>执行状态:</strong> 错误 1 个</p>
 
 <p class='description'>
                             内部接口测试报告结果（仅供参考）,
@@ -225,12 +225,64 @@ function showOutput(id, name) {
     <td>查看</td>
 </tr>
 
+<tr class='errorClass'>
+    <td>Test_banner_click.bannerCase</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_click1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "D:\pyWorkspace\py_app_autoTest\case\Test_banner_click.py", line 17, in test_click1
+    HomePage().advisory_click()
+  File "D:/pyWorkspace/py_app_autoTest\pages\tuozhen_HomePage.py", line 20, in advisory_click
+    wd.get_elements(self.advisory_class)[3].click()
+  File "D:/pyWorkspace/py_app_autoTest\base\Element.py", line 113, in get_elements
+    elements = self.driver.find_elements(*data)
+  File "D:\Program Files\Python35-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 983, in find_elements
+    'value': value})['value'] or []
+  File "D:\Program Files\Python35-32\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\Program Files\Python35-32\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "D:\Program Files\Python35-32\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "D:\Program Files\Python35-32\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 208, in check_response
+    raise exception_class(value)
+selenium.common.exceptions.WebDriverException: Message: Missing parameters: ["selector"]
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr id='total_row'>
     <td>统计</td>
-    <td>0</td>
+    <td>1</td>
     <td class="text text-success">0</td>
     <td class="text text-danger">0</td>
-    <td class="text text-warning">0</td>
+    <td class="text text-warning">1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

@@ -13,7 +13,7 @@ test_dir = './case'  #测试脚本存放路径
 discover = unittest.defaultTestLoader.discover(test_dir,pattern='test_*.py')
 writelog('info','=============')
 writelog('info','搜寻测试脚本结束')
-print("aaa")
+
 if __name__ == '__main__':
     now = time.strftime('%Y-%m-%d %H-%M-%S')
     filename = './result/html/' + u'APP自动化测试报告_' + now + '.html'  #拼接测试报告完整路径
