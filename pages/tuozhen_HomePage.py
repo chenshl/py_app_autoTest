@@ -5,15 +5,15 @@
 # 拓诊用户APP首页
 
 from appium import webdriver
+from base.appium_server import On_server
 from base.Element import Element
 
-class HomePage(object):
+class HomePage(Element):
 
-    #元素定位
     #我的咨询class
     advisory_class = 'android.widget.RelativeLayout'
+    
 
     #点击我的咨询
     def advisory_click(self):
-        wd = Element()
-        wd.get_classes(self.advisory_class)[4].click()
+        self.get_classes(self.advisory_class)[4].click()

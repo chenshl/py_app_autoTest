@@ -2,17 +2,17 @@
 # coding:utf-8
 # @author : csl
 # @date   : 2018/04/23 20:40
-# 基础操作
+# 基础操作(页面操作)
 
 from appium import webdriver
 from base.appium_server import On_server
 from appium.webdriver.mobilecommand import MobileCommand
 import time
 
-class Element(object):
-    #获取driver
-    def __init__(self):
-        self.driver = On_server().get_driver()
+class Element(On_server):
+    #获取driver对象
+    def __init__(self, driver):
+        self.driver = driver
 
     #ID定位
     def get_id(self, id):
@@ -104,8 +104,13 @@ class Element(object):
         self.driver.execute(MobileCommand.SWITCH_TO_CONTEXT, {"name": "NATIVE_APP"})
 
     #定位H5页面xpath返回列表
-    def get_xpath(self, xpath):
+    def get_xpaths(self, xpath):
         elements = self.driver.find_elements_by_xpath(xpath)
         return elements
+
+    #单个定位xpath
+    def get_xpath(self, xpath):
+        element = self.driver.find_element_by_xpath(xpath)
+        return element
 
 
