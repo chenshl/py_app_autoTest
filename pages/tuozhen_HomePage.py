@@ -12,7 +12,7 @@ class HomePage(Element):
 
     #我的咨询class
     advisory_class = 'android.widget.RelativeLayout'
-    
+
 
     #点击我的咨询
     def advisory_click(self):
