@@ -7,6 +7,7 @@
 from appium import webdriver
 from base.appium_server import On_server
 from appium.webdriver.mobilecommand import MobileCommand
+from selenium.webdriver.support.ui import WebDriverWait
 import time
 
 class Element(On_server):
@@ -19,10 +20,18 @@ class Element(On_server):
         element = self.driver.find_element_by_id(id)
         return element
 
+    #等待页面元素
+    def wait_for_id(self, id):
+        WebDriverWait(self.driver, 10, 5).until(lambda driver: self.driver.find_element_by_id(id))
+
     #name定位
     def get_name(self, name):
         element = self.driver.find_element_by_name(name)
         return element
+
+    #等待页面元素
+    def wait_for_name(self, name):
+        WebDriverWait(self.driver, 10, 5).until(lambda driver: self.driver.find_element_by_name(name))
 
     #退出
     def over(self):
@@ -89,6 +98,10 @@ class Element(On_server):
         elements = self.driver.find_elements_by_class_name(classesname)
         return elements
 
+    #等待页面元素
+    def wait_for_class(self, class_data):
+        WebDriverWait(self.driver, 10, 5).until(lambda  driver: self.driver.find_elements_by_class_name(class_data))
+
     #定位ID队列（返回一个list）
     def get_ids(self, ids):
         elements = self.driver.find_elements_by_id(ids)
@@ -112,5 +125,12 @@ class Element(On_server):
     def get_xpath(self, xpath):
         element = self.driver.find_element_by_xpath(xpath)
         return element
+
+    #等待页面元素加载
+    def wait_for_xpath(self, xpath):
+        WebDriverWait(self.driver, 10, 5).until(lambda driver: self.driver.find_element_by_xpath(xpath))
+
+
+
 
 

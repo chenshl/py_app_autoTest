@@ -12,8 +12,15 @@ class HomePage(Element):
 
     #我的咨询class
     advisory_class = 'android.widget.RelativeLayout'
+    button_my = "//android.widget.Button[contains(@text, '我的')]"
 
 
     #点击我的咨询
     def advisory_click(self):
+        self.wait_for_class(self.advisory_class)
         self.get_classes(self.advisory_class)[4].click()
+
+    #点击我的
+    def my_click(self):
+        # a = self.get_xpath(self.button_my)
+        self.get_xpath(self.button_my).click()

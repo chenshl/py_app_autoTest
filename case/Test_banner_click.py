@@ -21,6 +21,9 @@ class bannerCase(unittest.TestCase):
         HP.advisory_click()
         LP = LoginPage(self.driver)
         LP.login()
+        LP.back()
+        HP.my_click()
+
 
 
 
