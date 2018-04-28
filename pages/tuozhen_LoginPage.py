@@ -5,7 +5,6 @@
 # 登录页面
 
 from appium import webdriver
-from base.appium_server import On_server
 from base.Element import Element
 
 class LoginPage(Element):
