@@ -11,6 +11,7 @@ from HTMLTestRunner import HTMLTestRunner
 import unittest
 test_dir = './case'  #测试脚本存放路径
 discover = unittest.defaultTestLoader.discover(test_dir,pattern='test_*.py')
+# discover = unittest.defaultTestLoader.discover(test_dir,pattern='test_submit_comment.py')  #调试单个用例
 writelog('info','=============')
 writelog('info','搜寻测试脚本结束')
 

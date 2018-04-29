@@ -130,6 +130,3 @@ class Element(object):
         WebDriverWait(self.driver, 10, 1).until(lambda driver: driver.find_element_by_xpath(xpath))
 
 
-
-
-
