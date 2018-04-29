@@ -5,7 +5,6 @@
 # 拓诊用户APP首页
 
 from appium import webdriver
-from base.appium_server import On_server
 from base.Element import Element
 
 class HomePage(Element):
@@ -17,10 +16,9 @@ class HomePage(Element):
 
     #点击我的咨询
     def advisory_click(self):
-        self.wait_for_class(self.advisory_class)
+        self.wait_for_xpath(self.button_my)  #等待页面精确元素
         self.get_classes(self.advisory_class)[4].click()
 
     #点击我的
     def my_click(self):
-        # a = self.get_xpath(self.button_my)
         self.get_xpath(self.button_my).click()

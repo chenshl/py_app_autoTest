@@ -8,6 +8,8 @@ import unittest
 from base.appium_server import On_server
 from pages.tuozhen_HomePage import HomePage
 from pages.tuozhen_LoginPage import LoginPage
+from pages.tuozhen_MyPage import MyPage
+import time
 
 class bannerCase(unittest.TestCase):
 
@@ -21,10 +23,11 @@ class bannerCase(unittest.TestCase):
         HP.advisory_click()
         LP = LoginPage(self.driver)
         LP.login()
+        time.sleep(2)  #等待2秒加载数据
         LP.back()
         HP.my_click()
-
-
+        MP = MyPage(self.driver)
+        MP.quit_click()
 
 
     def tearDown(self):
